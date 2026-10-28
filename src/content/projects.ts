@@ -345,7 +345,7 @@ export const projects: Project[] = [
     slug: "boraali",
     name: "BoraAli",
     tagline: "Roteiros de viagem dia a dia, à mão ou com IA.",
-    techLabel: "Next.js + IA",
+    techLabel: "Next.js + Node.js + IA",
     tone: "orange",
     description:
       "Aplicação para montar roteiros de viagem dia a dia, manualmente ou com sugestões de IA, e compartilhar com quem vai junto.",
@@ -356,7 +356,7 @@ export const projects: Project[] = [
     roleLabel: "Concepção e desenvolvimento",
     applicationCategory: "TravelApplication",
     status: "publicado",
-    stack: ["Next.js", "React"],
+    stack: ["Next.js", "Node.js", "IA"],
     url: "https://boraali.wilhamsdev.com.br/",
     cover: {
       src: boraaliHome,
@@ -365,7 +365,7 @@ export const projects: Project[] = [
     seo: {
       title: "BoraAli — estudo de caso",
       description:
-        "Estudo de caso do BoraAli, aplicação de roteiros de viagem com assistente de IA, compartilhamento e exportação, desenvolvida por Wilhams Gomes com Next.js.",
+        "Estudo de caso do BoraAli, aplicação de roteiros de viagem com assistente de IA, compartilhamento e exportação, desenvolvida por Wilhams Gomes com Next.js, Node.js e IA.",
     },
     caseStudy: {
       overview: [
@@ -403,7 +403,11 @@ export const projects: Project[] = [
           description: "Versão vertical para o celular em três estilos, em PNG ou impressão em PDF.",
         },
       ],
-      stackGroups: [{ label: "Aplicação", items: ["Next.js", "React"] }],
+      stackGroups: [
+        { label: "Frontend", items: ["Next.js"] },
+        { label: "Backend", items: ["Node.js"] },
+        { label: "Inteligência artificial", items: ["IA"] },
+      ],
       challenges: [
         {
           title: "IA que sugere sem atropelar o plano",

@@ -81,7 +81,7 @@ Quando bloqueado, o site publica `robots.txt` com `Disallow: /`, a meta tag `noi
 
 - **Prints internos** do Proponi e do Cátedra, se quiser substituir os recortes dos sites públicos.
 - **Mais prints do Criaviz Studio.** O hero do site é um vídeo e os renders demoram a carregar, então só a seção de portfólio foi capturada.
-- **Stack e atuação no BoraAli:** só o Next.js foi confirmado pelo HTML publicado. Complete backend, banco, provedor de IA e o seu papel em `src/content/projects.ts`.
+- **Atuação no BoraAli:** a descrição do seu papel ainda é genérica; detalhe em `src/content/projects.ts` se quiser.
 - **Stack do FutData:** o frontend foi identificado como React pelo HTML publicado; confirme e complete (ex.: framework, banco de dados).
 - **Decisões de arquitetura** dos produtos. Os estudos de caso descrevem os desafios como problemas a resolver, sem afirmar como foram implementados; acrescente detalhes reais quando quiser.
 - **Mentoria full stack:** instituição e período, se quiser citá-los.
