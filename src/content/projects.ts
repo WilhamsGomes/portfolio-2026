@@ -9,6 +9,10 @@ import catedraHome from "@/assets/projetos/catedra/pagina-inicial.webp";
 import catedraSimulados from "@/assets/projetos/catedra/simulados.webp";
 import catedraSmartExam from "@/assets/projetos/catedra/smart-exam.webp";
 import catedraTutor from "@/assets/projetos/catedra/tutor-ia.webp";
+import boraaliAssistente from "@/assets/projetos/boraali/assistente-ia.webp";
+import boraaliExportacao from "@/assets/projetos/boraali/exportacao.webp";
+import boraaliHome from "@/assets/projetos/boraali/pagina-inicial.webp";
+import boraaliRoteiro from "@/assets/projetos/boraali/roteiro.webp";
 import criavizPortfolio from "@/assets/projetos/criaviz/portfolio.webp";
 import futdataDashboard from "@/assets/projetos/futdata/dashboard.webp";
 import futdataRankings from "@/assets/projetos/futdata/rankings.webp";
@@ -39,7 +43,7 @@ export type StackGroup = {
 };
 
 /** Cor de destaque do card. Cada projeto usa uma para se diferenciar na grade. */
-export type ProjectTone = "emerald" | "amber" | "sky" | "rose" | "accent";
+export type ProjectTone = "emerald" | "amber" | "orange" | "sky" | "rose" | "accent";
 
 export type Project = {
   slug: string;
@@ -89,6 +93,7 @@ export type Project = {
 
 const proponiCaption = "Interface exibida no site público do Proponi.";
 const catedraCaption = "Seção do site público do Cátedra.";
+const boraaliCaption = "Seção do site público do BoraAli, com roteiro de exemplo.";
 
 export const projects: Project[] = [
   {
@@ -334,6 +339,106 @@ export const projects: Project[] = [
       ],
       statusNote:
         "Em desenvolvimento, com versão pública disponível em catedra.wilhamsdev.com.br.",
+    },
+  },
+  {
+    slug: "boraali",
+    name: "BoraAli",
+    tagline: "Roteiros de viagem dia a dia, à mão ou com IA.",
+    techLabel: "Next.js + IA",
+    tone: "orange",
+    description:
+      "Aplicação para montar roteiros de viagem dia a dia, manualmente ou com sugestões de IA, e compartilhar com quem vai junto.",
+    context: "Projeto pessoal",
+    problem:
+      "O planejamento de uma viagem em grupo se espalha entre planilhas, mensagens e prints, sem uma visão clara do que acontece em cada dia.",
+    contribution: "Concepção e desenvolvimento do produto, da interface ao assistente de IA.",
+    roleLabel: "Concepção e desenvolvimento",
+    applicationCategory: "TravelApplication",
+    status: "publicado",
+    stack: ["Next.js", "React"],
+    url: "https://boraali.wilhamsdev.com.br/",
+    cover: {
+      src: boraaliHome,
+      alt: "Página inicial do BoraAli, com a chamada “Sua próxima viagem começa com um BoraAli” sobre uma foto do Rio de Janeiro e a prévia de um roteiro.",
+    },
+    seo: {
+      title: "BoraAli — estudo de caso",
+      description:
+        "Estudo de caso do BoraAli, aplicação de roteiros de viagem com assistente de IA, compartilhamento e exportação, desenvolvida por Wilhams Gomes com Next.js.",
+    },
+    caseStudy: {
+      overview: [
+        "O BoraAli organiza uma viagem em dias. Cada dia recebe passeios, refeições, deslocamentos e pausas com horário, exibidos em uma linha do tempo.",
+        "O roteiro pode ser montado à mão ou com um assistente de IA que sugere a programação do dia. Depois, é compartilhado com o grupo por link ou exportado como imagem.",
+      ],
+      audience: [
+        "Quem planeja uma viagem com outras pessoas costuma juntar ideias em planilhas, grupos de mensagens e capturas de tela, e o plano de cada dia se perde no meio do caminho.",
+        "O BoraAli é para quem quer um roteiro único, fácil de ajustar e de consultar durante o passeio.",
+      ],
+      role: [
+        "Concebi e desenvolvo o produto: fluxo de criação de viagens, organização dos dias, compartilhamento, exportação e assistente de IA.",
+      ],
+      features: [
+        {
+          title: "Criação da viagem",
+          description: "Nome, destino e datas; os dias da viagem são montados automaticamente.",
+        },
+        {
+          title: "Organização dos dias",
+          description:
+            "Atividades com horário em uma linha do tempo, que podem ser reordenadas quando os planos mudam.",
+        },
+        {
+          title: "Assistente de IA",
+          description:
+            "Sugere a programação do dia a partir de interesses, ritmo e orçamento; cada sugestão é revisada antes de entrar no roteiro.",
+        },
+        {
+          title: "Compartilhamento",
+          description: "Link de visualização somente leitura para quem vai junto.",
+        },
+        {
+          title: "Exportação do dia",
+          description: "Versão vertical para o celular em três estilos, em PNG ou impressão em PDF.",
+        },
+      ],
+      stackGroups: [{ label: "Aplicação", items: ["Next.js", "React"] }],
+      challenges: [
+        {
+          title: "IA que sugere sem atropelar o plano",
+          description:
+            "As sugestões do assistente entram no roteiro só depois de revisadas, sem apagar o que já foi planejado.",
+        },
+        {
+          title: "Planos que mudam",
+          description:
+            "Atividades são reordenadas ao longo da viagem, e a linha do tempo de cada dia precisa continuar coerente.",
+        },
+        {
+          title: "Um roteiro, vários formatos",
+          description:
+            "O mesmo dia aparece na linha do tempo, no link somente leitura, na imagem vertical para o celular e na versão para impressão.",
+        },
+      ],
+      gallery: [
+        {
+          src: boraaliRoteiro,
+          alt: "Prévia de um roteiro no BoraAli: dias da viagem, atividades com horário e um mapa ilustrativo com as paradas numeradas.",
+          caption: `Roteiro organizado por dia. ${boraaliCaption}`,
+        },
+        {
+          src: boraaliAssistente,
+          alt: "Seção do assistente de IA do BoraAli, com um pedido do usuário e uma sugestão de programação com botões para adicionar cada atividade.",
+          caption: `Assistente de IA. ${boraaliCaption}`,
+        },
+        {
+          src: boraaliExportacao,
+          alt: "Seção de exportação do BoraAli, com o roteiro do dia em formato vertical para celular em dois estilos.",
+          caption: `Exportação do dia como imagem. ${boraaliCaption}`,
+        },
+      ],
+      statusNote: "Publicado em boraali.wilhamsdev.com.br.",
     },
   },
   {

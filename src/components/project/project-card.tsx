@@ -8,6 +8,7 @@ import { projectPath, statusLabel, type Project, type ProjectTone } from "@/cont
 const toneClasses: Record<ProjectTone, { text: string; dot: string; hoverBorder: string }> = {
   emerald: { text: "text-emerald-400", dot: "bg-emerald-400", hoverBorder: "hover:border-emerald-400/40" },
   amber: { text: "text-amber-300", dot: "bg-amber-300", hoverBorder: "hover:border-amber-300/40" },
+  orange: { text: "text-orange-400", dot: "bg-orange-400", hoverBorder: "hover:border-orange-400/40" },
   sky: { text: "text-sky-400", dot: "bg-sky-400", hoverBorder: "hover:border-sky-400/40" },
   rose: { text: "text-rose-300", dot: "bg-rose-300", hoverBorder: "hover:border-rose-300/40" },
   accent: { text: "text-accent", dot: "bg-accent", hoverBorder: "hover:border-accent/40" },
